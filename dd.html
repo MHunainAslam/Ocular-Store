@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+<title>Document</title>
+</head>
+<style>
+  .slider {
+    font-family: Arial;
+    width: 100%;
+    display: block;
+    background-color: yellow;
+    margin: 0 auto;
+  }
+
+  h3 {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+  }
+
+  span {
+    cursor: pointer;
+  }
+
+
+  input {
+    height: 34px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .hhh {
+    background-color: #3498db !important;
+  }
+</style>
+
+<body>
+
+   <div class="col-md-6 my-5" id="myTab" role="tablist">
+    <a class="btn-a active text-black card mb-3 col-md-12 bg-transparent border-0" id="home-tab"
+        data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+        <div class="row g-0 ">
+            <div class="col-3 my-auto mx-auto upload-prescription">
+                <div class="ct position-relative">
+
+                    <img src="./assets//prescription//rx.png"
+                        class=" my-auto up-active rounded-pill p-3 w-100" alt="...">
+                </div>
+            </div>
+            <div class="col-md-9 ps-md-3 text-center text-md-start my-auto">
+                <div class="card-body ">
+                    <h4 class="price p-font lh-1 text-uppercase">Upload Prescription</h4>
+                    <p class="para-m">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been
+                        the industry's</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a class="btn-a  text-black card mb-3 col-md-12 bg-transparent border-0" id="profile-tab"
+        data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+        <div class="row g-0 ">
+            <div class="col-3 my-auto mx-auto upload-prescription">
+                <div class="un-ct position-relative">
+
+                    <img src="./assets//prescription//rx.png"
+                        class=" my-auto up-unactive rounded-pill p-3 w-100" alt="...">
+                </div>
+            </div>
+            <div class="col-md-9 ps-md-3 text-center text-md-start my-auto">
+                <div class="card-body ">
+                    <h4 class="price p-font lh-1 text-uppercase">Single Vision</h4>
+                    <p class="para-m">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been
+                        the industry's</p>
+                </div>
+            </div>
+        </div>
+    </a>
+   
+</div> 
+
+  <div class="container my-5">
+    <div class="" id="myTab" role="tablist">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+            aria-selected="false">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content" id="myTabContent">
+      <form class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div>
+          <div class="prescription-img">
+            <img src="./assets//prescription//prescription-img.png" class="w-100 py-2 " alt="">
+          </div>
+          <div class="p-4">
+            <h1 class="heading text-uppercase">Upload
+              Prescription</h1>
+            <p class="para">Select file from your computer folder to upload Most of image formats are
+              allowed
+              jpg,png,jpeg etc.</p>
+            <label class="card mb-3 col-md-12 bg-transparent dashed-border p-3">
+
+              <div class="row g-0">
+                <!-- upload-prescription -->
+                <div class="col-3 mx-auto my-auto text-center">
+                  <input type="file" id="hhhh" class="d-none">
+                  <svg width="65" height="61" viewBox="0 0 65 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M22.7671 13.6311H29.0944V42.596C29.0944 42.9727 29.4026 43.281 29.7793 43.281H34.9165C35.2932 43.281 35.6014 42.9727 35.6014 42.596V13.6311H41.9458C42.5194 13.6311 42.8362 12.9718 42.4852 12.5266L32.8959 0.385853C32.8318 0.303986 32.7499 0.237777 32.6565 0.192244C32.563 0.14671 32.4604 0.123047 32.3565 0.123047C32.2525 0.123047 32.1499 0.14671 32.0564 0.192244C31.963 0.237777 31.8811 0.303986 31.8171 0.385853L22.2277 12.5181C21.8767 12.9718 22.1935 13.6311 22.7671 13.6311ZM63.693 40.0274H58.5559C58.1791 40.0274 57.8709 40.3357 57.8709 40.7124V53.8977H6.842V40.7124C6.842 40.3357 6.53377 40.0274 6.15705 40.0274H1.01991C0.643189 40.0274 0.334961 40.3357 0.334961 40.7124V57.6649C0.334961 59.1804 1.55931 60.4048 3.07477 60.4048H61.6381C63.1536 60.4048 64.378 59.1804 64.378 57.6649V40.7124C64.378 40.3357 64.0697 40.0274 63.693 40.0274Z"
+                      fill="#6FBBD1" />
+                  </svg>
+
+                </div>
+                <div class="col-md-9 text-center text-md-start my-auto ">
+                  <div class="card-body ">
+                    <h4 class="price p-font lh-1 text-uppercase">Browse</h4>
+                    <p class="para-m">
+                      (Near vision, far vision and both near and far) </p>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+          </div>
+          <div class="card mb-3 col-md-12 bg-black  p-md-3 p-1 text-white">
+            <div class="row g-0 ">
+              <!-- upload-prescription -->
+              <div class="col-3 mx-auto my-auto ">
+                <img src="./assets//products//product1f.png" class=" w-100" alt="...">
+              </div>
+              <div class="col-md-9 text-center text-md-start my-auto ">
+                <div class="card-body ">
+                  <h4 class="heading-m fw-bold text-uppercase">Gucci GG125S 007 men sunglasses
+                  </h4>
+                  <div class="d-lg-flex mt-3 justify-content-md-start justfiy-content-center">
+                    <div class="col-lg-6 col-12 px-md-0 px-3 mt-md-auto mt-3">
+                      <div class="border-3 input-group minus rounded-5  bg-p border-2-solid">
+                        <button class="input-group-text bg-transparent rounded-pill border-0" id="basic-addon1"
+                          data-type="minus" data-field="quant[1]">
+                          -
+                        </button>
+                        <input type="text" readonly class="form-control border-0 text-center bg-white" name="quant[1]"
+                          value="1" min="1">
+                        <button class="input-group-text bg-transparent plus rounded-pill border-0" id="basic-addon1"
+                          data-type="plus" data-field="quant[1]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <p class="mx-auto text-center my-lg-auto mt-3 para-m color-p">Rs.35,000.00
+                    </p>
+                  </div>
+                  <button type="button" class="border-0 p-2 bg-black rounded-5 btn-a col-12 col-lg-8 mt-3 switch-tab"
+                    data-tab="profile">
+                    <p class="para m-0 text-white text-uppercase">Continue
+                      <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M33.4623 6.54986C33.7552 6.25697 33.7552 5.78209 33.4623 5.4892L28.6893 0.71623C28.3964 0.423337 27.9215 0.423337 27.6286 0.71623C27.3357 1.00912 27.3357 1.484 27.6286 1.77689L31.8713 6.01953L27.6286 10.2622C27.3357 10.5551 27.3357 11.0299 27.6286 11.3228C27.9215 11.6157 28.3964 11.6157 28.6893 11.3228L33.4623 6.54986ZM0.864258 6.76953H32.9319V5.26953H0.864258V6.76953Z"
+                          fill="white" />
+                      </svg>
+                    </p>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div>
+          <div class="prescription-img">
+            <img src="./assets//prescription//singlevision.png" class="w-100 py-2 " alt="">
+          </div>
+          <div class="p-4">
+            <h1 class="heading text-uppercase">Single Vision</h1>
+            <p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <div class="d-flex form-check">
+              <input class="form-check-input bg-l" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label para" for="flexCheckDefault">
+                Need Glasses for Cosmetic / fashion purpose only
+              </label>
+            </div>
+            <hr class="color-p opacity-100 w-100 my-4">
+            <div class="mb-3 col-md-12 bg-transparent ">
+              <div class=" d-flex justify-content-between">
+                <h1 class="heading-m">PD - Pupillary Distance</h1>
+                <svg width="19" height="25" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.7923 22.7654H15.9698V13.2327H12.7923V22.7654ZM14.381 6.87757C13.5866 6.87757 12.7923 7.67196 12.7923 8.46635C12.7923 9.26074 13.5866 10.0551 14.381 10.0551C15.1754 10.0551 15.9698 9.26074 15.9698 8.46635C15.9698 7.67196 15.1754 6.87757 14.381 6.87757ZM14.381 0.522461C6.43714 0.522461 0.0820312 6.87757 0.0820312 14.8215C0.0820312 22.7654 6.43714 29.1205 14.381 29.1205C22.3249 29.1205 28.68 22.7654 28.68 14.8215C28.68 6.87757 22.3249 0.522461 14.381 0.522461ZM14.381 25.9429C8.1848 25.9429 3.25959 21.0177 3.25959 14.8215C3.25959 8.62523 8.1848 3.70002 14.381 3.70002C20.5773 3.70002 25.5025 8.62523 25.5025 14.8215C25.5025 21.0177 20.5773 25.9429 14.381 25.9429Z"
+                    fill="#6FBBD1" />
+                </svg>
+
+              </div>
+              <div class="bg-light p-3 my-2">
+                <div class="d-sm-flex " required>
+                  <label for="single" class="d-flex col-md-4 my-2 col-sm-6 col-12 rounded-5 p-2 bg-p"><input
+                      type="radio" id="single" name="singledual" style=" accent-color: #232323;">
+                    <label for="single" class="para mx-auto text-white text-center  ps-2">Single</label>
+                  </label>
+                  <label for="dual" class="d-flex ms-sm-2 col-md-4 my-2 col-sm-6 col-12 rounded-5 p-2 bg-black"><input
+                      type="radio" id="dual" name="singledual" style=" accent-color: #232323;">
+                    <label for="dual" class="para mx-auto text-white text-center  ps-2">Dual</label>
+                  </label>
+                </div>
+                <select class="form-select form-control  rounded-pill  border-0" required
+                  aria-label="Default select example" style="color: #979797;">
+                  <option value="" disabled selected hidden>
+                    Select</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="bg-light  p-3 my-2">
+                <div class="d-md-flex">
+                  <div class="col-md-4 mt-2 ">
+                    <p class="para mb-md-0 text-md-start text-center">Right eye (OD)</p>
+                  </div>
+                  <div class="col-md-8">
+                    <select class="form-select form-control  rounded-pill  border-0" required
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Sphere (0)</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <select class="form-select form-control my-2 rounded-pill border-0" required
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Cylinder (0)</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <select class="form-select form-control my-2 rounded-pill  border-0" required
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Select axis</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <hr class="my-3 color-p">
+                <div class="d-md-flex">
+                  <div class="col-md-4 mt-2">
+                    <p class="para mb-md-0 text-md-start text-center">Left eye (OD)</p>
+                  </div>
+                  <div class="col-md-8">
+                    <select class="form-select form-control  rounded-pill  border-0" required
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Sphere (0)</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <select class="form-select form-control my-2 rounded-pill border-0" required
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Cylinder (0)</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <select class="form-select form-control my-2 rounded-pill  border-0" required
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Select axis</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-light  p-3 my-2">
+                <div class="d-md-flex">
+                  <div class="col-md-4 mt-2">
+                    <p class="para mb-md-0 text-md-start text-center">Birth Year</p>
+                  </div>
+                  <div class="col-md-8 ">
+                    <select class="form-select form-control  rounded-pill  border-0" required type="date"
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Sphere (0)</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="card mb-3 col-md-12 bg-black  p-md-3 p-1 text-white">
+            <div class="row g-0 ">
+              <!-- upload-prescription -->
+              <div class="col-3 mx-auto my-auto ">
+                <img src="./assets//products//product1f.png" class=" w-100" alt="...">
+              </div>
+              <div class="col-md-9 text-center text-md-start my-auto ">
+                <div class="card-body ">
+                  <h4 class="heading-m fw-bold text-uppercase">Gucci GG125S 007 men sunglasses
+                  </h4>
+                  <div class="d-lg-flex mt-3 justify-content-md-start justfiy-content-center">
+                    <div class="col-lg-6 col-12 px-md-0 px-3 mt-md-auto mt-3">
+                      <div class="border-3 input-group minus rounded-5  bg-p border-2-solid">
+                        <button class="input-group-text bg-transparent rounded-pill border-0" id="basic-addon1"
+                          data-type="minus" data-field="quant[1]">
+                          -
+                        </button>
+                        <input type="text" readonly class="form-control border-0 text-center bg-white" name="quant[1]"
+                          value="1" min="1">
+                        <button class="input-group-text bg-transparent plus rounded-pill border-0" id="basic-addon1"
+                          data-type="plus" data-field="quant[1]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <p class="mx-auto text-center my-lg-auto mt-3 para-m color-p">Rs.35,000.00
+                    </p>
+                  </div>
+                  <button type="button" class="border-0 p-2 bg-black rounded-5 btn-a col-12 col-lg-8 mt-3   switch-tab"
+                    data-tab="bifocal">
+                    <p class="para m-0 text-white text-uppercase">Continue
+                      <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M33.4623 6.54986C33.7552 6.25697 33.7552 5.78209 33.4623 5.4892L28.6893 0.71623C28.3964 0.423337 27.9215 0.423337 27.6286 0.71623C27.3357 1.00912 27.3357 1.484 27.6286 1.77689L31.8713 6.01953L27.6286 10.2622C27.3357 10.5551 27.3357 11.0299 27.6286 11.3228C27.9215 11.6157 28.3964 11.6157 28.6893 11.3228L33.4623 6.54986ZM0.864258 6.76953H32.9319V5.26953H0.864258V6.76953Z"
+                          fill="white" />
+                      </svg>
+                    </p>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            </d>
+          </div>
+
+        </div>
+      </form>
+      <form class="tab-pane fade" id="bifocal" role="tabpanel" aria-labelledby="bifocal-tab">
+        <div>
+          <div class="prescription-img">
+            <img src="./assets//prescription//bifocal.png" class="w-100 py-2 " alt="">
+          </div>
+          <div class="p-4">
+            <h1 class="heading text-uppercase">Bifocal</h1>
+            <p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+              Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+
+            <hr class="color-p opacity-100 w-100 my-4">
+            <div class="mb-3 col-md-12 bg-transparent ">
+              <div class=" d-flex justify-content-between">
+                <h1 class="heading-m">PD - Pupillary Distance</h1>
+                <svg width="19" height="25" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.7923 22.7654H15.9698V13.2327H12.7923V22.7654ZM14.381 6.87757C13.5866 6.87757 12.7923 7.67196 12.7923 8.46635C12.7923 9.26074 13.5866 10.0551 14.381 10.0551C15.1754 10.0551 15.9698 9.26074 15.9698 8.46635C15.9698 7.67196 15.1754 6.87757 14.381 6.87757ZM14.381 0.522461C6.43714 0.522461 0.0820312 6.87757 0.0820312 14.8215C0.0820312 22.7654 6.43714 29.1205 14.381 29.1205C22.3249 29.1205 28.68 22.7654 28.68 14.8215C28.68 6.87757 22.3249 0.522461 14.381 0.522461ZM14.381 25.9429C8.1848 25.9429 3.25959 21.0177 3.25959 14.8215C3.25959 8.62523 8.1848 3.70002 14.381 3.70002C20.5773 3.70002 25.5025 8.62523 25.5025 14.8215C25.5025 21.0177 20.5773 25.9429 14.381 25.9429Z"
+                    fill="#6FBBD1" />
+                </svg>
+
+              </div>
+              <div class="bg-light p-3 my-2">
+                <div class="d-sm-flex">
+                  <label for="single" class="d-flex col-md-4 my-2 col-sm-6 col-12 rounded-5 p-2 bg-p"><input
+                      type="radio" id="single" name="singledual" style=" accent-color: #232323;">
+                    <label for="single" class="para mx-auto text-white text-center  ps-2">Single</label>
+                  </label>
+                  <label for="dual" class="d-flex ms-sm-2 col-md-4 my-2 col-sm-6 col-12 rounded-5 p-2 bg-black"><input
+                      type="radio" id="dual" name="singledual" style=" accent-color: #232323;">
+                    <label for="dual" class="para mx-auto text-white text-center  ps-2">Dual</label>
+                  </label>
+                </div>
+                <select class="form-select form-control  rounded-pill  border-0" required
+                  aria-label="Default select example" style="color: #979797;">
+                  <option value="" disabled selected hidden>
+                    Select</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="bg-light  p-3 my-2">
+                <div class="row g-0">
+                  <!-- upload-prescription -->
+
+                  <div class="col-md-9 text-center text-md-start my-auto ">
+                    <div class="card-body ">
+                      <h4 class="heading-m lh-1 text-uppercase">Upload Using Computer</h4>
+                      <p class="para-m ">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. </p>
+                    </div>
+                  </div>
+                  <label class="col-3 mx-auto my-auto text-center">
+                    <input type="file" class="d-none">
+                    <svg width="45" height="41" viewBox="0 0 65 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.7671 13.6311H29.0944V42.596C29.0944 42.9727 29.4026 43.281 29.7793 43.281H34.9165C35.2932 43.281 35.6014 42.9727 35.6014 42.596V13.6311H41.9458C42.5194 13.6311 42.8362 12.9718 42.4852 12.5266L32.8959 0.385853C32.8318 0.303986 32.7499 0.237777 32.6565 0.192244C32.563 0.14671 32.4604 0.123047 32.3565 0.123047C32.2525 0.123047 32.1499 0.14671 32.0564 0.192244C31.963 0.237777 31.8811 0.303986 31.8171 0.385853L22.2277 12.5181C21.8767 12.9718 22.1935 13.6311 22.7671 13.6311ZM63.693 40.0274H58.5559C58.1791 40.0274 57.8709 40.3357 57.8709 40.7124V53.8977H6.842V40.7124C6.842 40.3357 6.53377 40.0274 6.15705 40.0274H1.01991C0.643189 40.0274 0.334961 40.3357 0.334961 40.7124V57.6649C0.334961 59.1804 1.55931 60.4048 3.07477 60.4048H61.6381C63.1536 60.4048 64.378 59.1804 64.378 57.6649V40.7124C64.378 40.3357 64.0697 40.0274 63.693 40.0274Z"
+                        fill="black" />
+                    </svg>
+
+                  </label>
+                </div>
+              </div>
+              <div class="bg-light  p-3 my-2">
+                <div class="d-flex">
+                  <div class="col-md-4 mt-2">
+                    <p class="para mb-0">Birth Year</p>
+                  </div>
+                  <div class="col-md-8">
+                    <select class="form-select form-control  rounded-pill  border-0" required type="date"
+                      aria-label="Default select example" style="color: #979797;">
+                      <option value="" disabled selected hidden>
+                        Sphere (0)</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="card mb-3 col-md-12 bg-black  p-md-3 p-1 text-white">
+            <div class="row g-0 ">
+              <!-- upload-prescription -->
+              <div class="col-3 mx-auto my-auto ">
+                <img src="./assets//products//product1f.png" class=" w-100" alt="...">
+              </div>
+              <div class="col-md-9 text-center text-md-start my-auto ">
+                <div class="card-body ">
+                  <h4 class="heading-m fw-bold text-uppercase">Gucci GG125S 007 men sunglasses
+                  </h4>
+                  <div class="d-lg-flex mt-3 justify-content-md-start justfiy-content-center">
+                    <div class="col-lg-6 col-12 px-md-0 px-3 mt-md-auto mt-3">
+                      <div class="border-3 input-group minus rounded-5  bg-p border-2-solid">
+                        <button class="input-group-text bg-transparent rounded-pill border-0" id="basic-addon1"
+                          data-type="minus" data-field="quant[1]">
+                          -
+                        </button>
+                        <input type="text" readonly class="form-control border-0 text-center bg-white" name="quant[1]"
+                          value="1" min="1">
+                        <button class="input-group-text bg-transparent plus rounded-pill border-0" id="basic-addon1"
+                          data-type="plus" data-field="quant[1]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <p class="mx-auto text-center my-lg-auto mt-3 para-m color-p">
+                      Rs.35,000.00
+                    </p>
+                  </div>
+                  <button type="button" class="border-0 p-2 bg-black rounded-5 btn-a col-12 col-lg-8 mt-3 switch-tab"
+                    data-tab="home">
+                    <p class="para m-0 text-white text-uppercase">Continue
+                      <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M33.4623 6.54986C33.7552 6.25697 33.7552 5.78209 33.4623 5.4892L28.6893 0.71623C28.3964 0.423337 27.9215 0.423337 27.6286 0.71623C27.3357 1.00912 27.3357 1.484 27.6286 1.77689L31.8713 6.01953L27.6286 10.2622C27.3357 10.5551 27.3357 11.0299 27.6286 11.3228C27.9215 11.6157 28.3964 11.6157 28.6893 11.3228L33.4623 6.54986ZM0.864258 6.76953H32.9319V5.26953H0.864258V6.76953Z"
+                          fill="white" />
+                      </svg>
+                    </p>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  
+  <div class="">
+    <span class="">-</span>
+    <input class="rounded-5" type="text" value="1" />
+    <span class="">+</span>
+  </div>
+
+
+  <div class="col-md-8 col-8 mx-auto pe-1 rounded-pill">
+    
+    <div class="input-group minus rounded-5 number footer-mail" style="background-color: #F3F3F3;">
+      <span class="input-group-text bg-p rounded-pill border-0" id="basic-addon1" data-type="minus"
+      data-field="quant[1]">
+        -
+      </span>
+      <input style="background-color: #F3F3F3;" type="text" class="form-control border-0 rounded-pill"  name="quant[1]" value="1" min="1" max="10">
+      <span class="input-group-text bg-p plus rounded-pill border-0" id="basic-addon1" data-type="plus" data-field="quant[1]">
+        +
+      </span>
+    </div>
+  </div>
+  
+  
+  <div class="input-group rounded-5 ">
+    <span class="input-group-prepend">
+      <button type="button" class="btn rounded-pill btn-number" disabled="disabled" data-type="minus"
+        data-field="quant[1]">
+        <span class="">-</span>
+      </button>
+    </span>
+    <input type="text" name="quant[1]" class="form-control input-number rounded-pill" value="1" min="1" max="10">
+    <span class="input-group-prepend">
+      <button type="button" class="btn btn-number rounded-pill" data-type="plus" data-field="quant[1]">
+        <span class="">+</span>
+      </button>
+    </span>
+  </div>
+  <section class="bg-light">
+    <div class="container p-5">
+      <div class="col-12 bg-white ">
+        <div class="slider d-flex justify-content-between">
+          <div class=" slider-for" style="width:50%;">
+            <div>
+              <h3>1</h3>
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+          </div>
+          <div class=" slider-nav" style="width:40%">
+            <div>
+              <h3>1</h3>
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.min.js"></script>
+ <script>
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    focusOnSelect: true,
+    //    rtl: true,
+
+  });
+
+  $('a[data-slide]').click(function (e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.slider-nav').slick('slickGoTo', slideno - 1);
+  });
+  $(document).ready(function () {
+    $('.minus').click(function () {
+      var $input = $(this).parent().find('input');
+      var count = parseInt($input.val()) - 1;
+      count = count < 1 ? 1 : count;
+      $input.val(count);
+      $input.change();
+      return false;
+    });
+    $('.plus').click(function () {
+      var $input = $(this).parent().find('input');
+      $input.val(parseInt($input.val()) + 1);
+      $input.change();
+      return false;
+    });
+  });
+</script>
+
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+<!--<script>-->
+<!--  $('.switch-tab').click(function () {-->
+<!--    var tab = $(this).data('tab');-->
+<!--    $('#myTab a[href="#' + tab + '"]').tab('show');-->
+<!--  });-->
+<!--</script>-->
+
+</html>
